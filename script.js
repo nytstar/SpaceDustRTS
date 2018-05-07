@@ -1,74 +1,4 @@
-<?php
-	include 'header.php';
-?>
-
-
-
-
-	<div id="large-header" class="large-header">
-  <canvas id="demo-canvas"></canvas>
-		
-    <h1 class="main-title"> <span class="thin"></span></h1>
-		
-</div>
-<section class="main-container">
-	<div class="main-wrapper">
-		<div>
-			
-			<br />
-			<h2>Home</h2>
-		<?php
-			if (isset($_SESSION['u_id'])) {
-				echo "you are logged in!";
-			}
-		?>	
-		
-		
-		<div class="module1">
-			
-			<h1>module 1</h1>
-			</div>
-			<div class="module2">
-			
-			<h1>module 2</h1>
-			</div>
-			<div class="module3">
-			
-			<h1>module 3</h1>
-			</div>
-			<div class="module4">
-			
-			<h1>module 4</h1>
-			
-			</div>
-				<h1>module 5</h1>
-			</div>
-			<div class="module5">
-			
-			<h1>module 6</h1>
-			</div>
-			<div class="module6">
-			
-			<h1>module 7</h1>
-			</div>
-			<div class="module7">
-			
-			<h1>module 8</h1>
-			</div>
-		<div class="module8">
-			
-			<h1>module 1</h1>
-			</div>
-		
-		
-		</div>
-		
-		
-		
-	</div>
-</section>
-	
-	<script>(function() {
+(function() {
 
     var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 
@@ -252,10 +182,4 @@
         return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
     }
     
-})();</script>
-	
-
-
-<?php
-	include 'footer.php';
-?>
+})();

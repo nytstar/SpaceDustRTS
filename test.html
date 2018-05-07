@@ -1,74 +1,27 @@
-<?php
-	include 'header.php';
-?>
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+	<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
+	<script src="http://static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+	<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
+	<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
+	
+	
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
 
-
-
-
+<body>
 	<div id="large-header" class="large-header">
   <canvas id="demo-canvas"></canvas>
-		
-    <h1 class="main-title"> <span class="thin"></span></h1>
-		
+    <h1 class="main-title">Connect <span class="thin">Three</span></h1>
 </div>
-<section class="main-container">
-	<div class="main-wrapper">
-		<div>
-			
-			<br />
-			<h2>Home</h2>
-		<?php
-			if (isset($_SESSION['u_id'])) {
-				echo "you are logged in!";
-			}
-		?>	
 		
-		
-		<div class="module1">
-			
-			<h1>module 1</h1>
-			</div>
-			<div class="module2">
-			
-			<h1>module 2</h1>
-			</div>
-			<div class="module3">
-			
-			<h1>module 3</h1>
-			</div>
-			<div class="module4">
-			
-			<h1>module 4</h1>
-			
-			</div>
-				<h1>module 5</h1>
-			</div>
-			<div class="module5">
-			
-			<h1>module 6</h1>
-			</div>
-			<div class="module6">
-			
-			<h1>module 7</h1>
-			</div>
-			<div class="module7">
-			
-			<h1>module 8</h1>
-			</div>
-		<div class="module8">
-			
-			<h1>module 1</h1>
-			</div>
-		
-		
-		</div>
-		
-		
-		
-	</div>
-</section>
-	
-	<script>(function() {
+</body>
+<script>(function() {
 
     var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 
@@ -253,9 +206,4 @@
     }
     
 })();</script>
-	
-
-
-<?php
-	include 'footer.php';
-?>
+</html>
