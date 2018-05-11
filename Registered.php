@@ -4,6 +4,7 @@
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta http-equiv="refresh" content="5;https://spacedustrtswip.000webhostapp.com/Login.php" />
         <link rel="stylesheet" type="text/css" media="screen" href="reset.php"/>
         <link rel="stylesheet" type="text/css" media="screen" href="main.php"/>
         <script src="Tween.js"></script>
@@ -13,7 +14,14 @@
 
     <body>
         <div id="large-header" class="large-header">
-            <h3 class="main-title">Thank you for the Registration..now you may Login</h3>
+            <div>
+			<h3 class="main-title">Thank you for the Registration..now you may Login
+				<br />
+				Redirecting in 5 seconds.......
+			</h3>
+			
+			</div>
+			
             <canvas id="demo-canvas"></canvas>
         </div>
         <script src="Intro.js"></script>
