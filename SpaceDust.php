@@ -1,8 +1,5 @@
 <?php
-    if($_SESSION["LoggedIn"] == false)
-    {
-        header("Location: Index.php");
-    }
+
 ?>
 
 <html>
@@ -13,17 +10,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" type="text/css" media="screen" href="reset.php"/>
         <link rel="stylesheet" type="text/css" media="screen" href="style.php"/>
-        <script src="Tween.js"></script>
-        <script src="TweenMax.js"></script>
-        <script src="TweenLite.js"></script>
-        <script src=""></script>
     </head>
 
     <body>
         <canvas id="canvas">
 
         </canvas>
-
+        
+        <script src="socket.io.js"></script>
+        <script src="Camera.js"></script>
+        <script src="Sprite.js"></script>
+        <script src="Constants.js"></script>
+        <script src="Instances.js"></script>
         <script src="main.js"></script>
     </body>
 </html>

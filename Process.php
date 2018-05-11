@@ -11,7 +11,7 @@
             }
 
             $username = mysqli_real_escape_string($connection,$_POST["username"]);
-            $password = mysqli_real_escape_string($connection,password_hash($_POST["password"],PASSWORD_BCRYPT));
+            $password = mysqli_real_escape_string($connection,$_POST["password"]);
 
             $sql = "SELECT * FROM users WHERE username='$username'";
             $result = mysqli_query($connection,$sql);
@@ -23,6 +23,7 @@
                 if(mysqli_num_rows($result) > 0 && password_verify($password,$current_user["password"]))
                 {
                     $_SESSION["LoggedIn"] = true;
+                    header("Location: SpaceDust.php");
                 }
                 else
                 {
@@ -52,9 +53,10 @@
             $detials = json_decode(file_get_contents("http://ipinfo.io/{$IP}/json"));
             //$country = $detials->country;
             //$city = $detials->city;
+            //$region = $detials->region;
 
             $sql = "INSERT INTO users(username,email,password) VALUES('$username','$email','$password')";
-            //$sql = "INSERT INTO users(username,email,password,country,city) VALUES('$username','$email','$password','$country','$city')";
+            //$sql = "INSERT INTO users(username,email,password,country,city,region) VALUES('$username','$email','$password','$country','$city','$region')";
             $result = mysqli_query($connection,$sql);
 
             if($result == true)
