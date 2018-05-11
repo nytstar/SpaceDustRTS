@@ -1,5 +1,10 @@
 <?php
-
+    /*
+    if($_SESSION["LoggedIn"] == false)
+    {
+        header("Location: Index.php");
+    }
+    */
 ?>
 
 <html>
@@ -16,7 +21,7 @@
         <canvas id="canvas">
 
         </canvas>
-        
+
         <script src="socket.io.js"></script>
         <script src="Camera.js"></script>
         <script src="Sprite.js"></script>
