@@ -27,22 +27,15 @@
         <script src="TweenLite.js"></script>
     </head>
 
-    <body>
+    <body oncontextmenu="return false;">
         <div id="large-header" class="large-header">
-
             <h1 class="main-title">Space Dust</span></h1>
 
             <form action="Index.php" method="POST">
                 <input type="submit" name="Login" class="form-btn" value="Login"/>
                 <input type="submit" name="Register" class="form-btn" value="Register"/>
             </form>
-
             <canvas id="demo-canvas">
-		
-		
-		
-		
-		
 		</canvas>
         </div>
 

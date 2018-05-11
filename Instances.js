@@ -3,11 +3,20 @@ console.log("Instances.js Loaded");
 function Spaceship(sprite,x,y,w,h,max_spd,id)
 {
     this.acc = 0.1;
+    this.selected = true;
     this.sprite = new Sprite("player_right.png",{widht: w,height: h});
     this.sprite_right = new Sprite("player_right.png",{width: w,height: h});
     this.sprite_left = new Sprite("player_left.png",{width: w,height: h});
+    this.sprite_up = new Sprite("player_up.png",{width: w,height: h});
+    this.sprite_down = new Sprite("player_down.png",{width: w,height: h});
+    this.target_x = x;
+    this.target_y = y;
+    this.threshold = 0;
+    this.moving = 0;
     this.speed = 5;
     this.turn_spd = 200;
+    this.direction = 0;
+    this.factor = 75;
     this.x = x;
     this.y = y;
     this.width = w;
@@ -15,6 +24,8 @@ function Spaceship(sprite,x,y,w,h,max_spd,id)
     this.max_spd = max_spd;
     this.image_angle = 0;
     this.id = id;
+    this.xp = x;
+    this.yp = y;
 
     this.update = function()
     {
@@ -23,14 +34,20 @@ function Spaceship(sprite,x,y,w,h,max_spd,id)
             if(keys[KEY_RIGHT] || keys[KEY_D])
             {
                 this.x += this.speed;
-                this.sprite = this.sprite_right;
             }
             if(keys[KEY_LEFT] || keys[KEY_A])
             {
                 this.x -= this.speed;
-                this.sprite = this.sprite_left;
             }
-
+            if(keys[KEY_UP] || keys[KEY_W])
+            {
+                this.y -= this.speed;
+            }
+            if(keys[KEY_DOWN] || keys[KEY_S])
+            {
+                this.y += this.speed;
+            }
+            
             camera.zoomTo(0);
             camera.moveTo(this.x - (map_width/2),this.y - (map_height/2));
         }

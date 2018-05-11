@@ -1,9 +1,16 @@
 <?php
+    /*
     $servername = "localhost";
     $username = "id5726088_spacedustteam";
     $password = "Tubular@Commit";
     $database = "id5726088_spacedust";
+    */
 
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "spacedust";
+    
     if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         if(isset($_POST["Login"]) && isset($_POST["username"]) && isset($_POST["password"]))

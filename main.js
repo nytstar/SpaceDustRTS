@@ -1,12 +1,16 @@
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
-var map_width = canvas.width = canvas.scrollWidth = window.innerWidth;
-var map_height = canvas.height = canvas.scrollHeight = window.innerHeight;
-var world_width = map_width;
-var world_height = map_height;
+var world_width = 100000;
+var world_height = 100000;
+var map_width = canvas.width = canvas.scrollWidth = world_width;
+var map_height = canvas.height = canvas.scrollHeight = world_height;
 var background = new Image();
 var default_x = map_width/2;
 var default_y = map_height/2;
+var mouse_pressed = false;
+var right_mouse_pressed = false;
+var mouse_x = 0;
+var mouse_y = 0;
 var players = [];
 var bases = [];
 var keys = [];
@@ -15,9 +19,9 @@ var camera;
 
 function Awake()
 {
-    socket = io.connect("http://localhost:8003");
-    background.src = "Sprites/black.png";
+    socket = io.connect("206.189.188.13:8003");
     camera = new Camera(context);
+    background.src = "black.png";
     Start();
 }
 
@@ -40,7 +44,7 @@ function Start()
         socket.on("create",function(data)
         {
             var new_player = new Spaceship("Sprites/player_spaceship.png",default_x,default_y,96,72,5,data.id);
-            players.push(new_player)
+            players.push(new_player);
         });
     
         socket.on("spawn",function(data)
@@ -92,6 +96,13 @@ function Update()
     requestAnimationFrame(Update);
 }
 
+function UpdateMouse(event)
+{
+    rect = canvas.getBoundingClientRect();
+    mouse_x = event.clientX - rect.left;
+    mouse_y = event.clientY - rect.top;
+}
+
 function KeyPressed(event)
 {
     keys[event.keyCode] = true;
@@ -102,6 +113,18 @@ function KeyReleased(event)
     keys[event.keyCode] = false;
 }
 
+function MousePressed()
+{
+    mouse_pressed = true;
+}
+
 window.addEventListener("load",Awake);
 window.addEventListener("keydown",KeyPressed);
 window.addEventListener("keyup",KeyReleased);
+window.addEventListener("click",MousePressed);
+window.addEventListener("mousemove",UpdateMouse);
+
+canvas.oncontextmenu = function(e)
+{
+    e.preventDefault();
+}

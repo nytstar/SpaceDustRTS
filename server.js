@@ -5,7 +5,7 @@ var port = 8003;
 var players = [];
 var bases = [];
 
-var server = app.listen(port,"localhost",function()
+var server = app.listen(port,"0.0.0.0",function()
 {
     console.log("Space Dust Server has been Started");
 });
