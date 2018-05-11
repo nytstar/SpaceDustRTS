@@ -12,6 +12,7 @@
 
     $_SESSION["LoggedIn"] = false;
 ?>
+<!--test-->
 <!DOCTYPE html>
 <html>
     <head>
