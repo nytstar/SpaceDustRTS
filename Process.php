@@ -1,9 +1,24 @@
+
+<!--Pickle92war-->
+
+
+<!--
+$servername = "id3703001_spacedust";
+$username = "id3703001_spacedustteam";
+$password = "Pickle92war";
+-->
+
 <?php
+
+$servername = "id3703001_spacedust";
+$username = "id3703001_spacedustteam";
+$password = "Pickle92war";
+
     if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         if(isset($_POST["Login"]) && isset($_POST["username"]) && isset($_POST["password"]))
         {
-            $connection = mysqli_connect("localhost","root","","spacedust");
+            $connection = mysqli_connect("$servername","$username","","$password");
 
             if($connection == false)
             {
