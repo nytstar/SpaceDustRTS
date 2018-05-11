@@ -37,7 +37,13 @@
                 <input type="submit" name="Register" class="form-btn" value="Register"/>
             </form>
 
-            <canvas id="demo-canvas"></canvas>
+            <canvas id="demo-canvas">
+		
+		
+		
+		
+		
+		</canvas>
         </div>
 
         
