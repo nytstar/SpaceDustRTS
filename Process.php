@@ -56,12 +56,12 @@
 
             $IP = $_SERVER["REMOTE_ADDR"];
             $detials = json_decode(file_get_contents("http://ipinfo.io/{$IP}/json"));
-            //$country = $detials->country;
-            //$city = $detials->city;
-            //$region = $detials->region;
+            $country = $detials->country;
+            $city = $detials->city;
+            $region = $detials->region;
 
-            $sql = "INSERT INTO users(username,email,password) VALUES('$username','$email','$password')";
-            //$sql = "INSERT INTO users(username,email,password,country,city,region) VALUES('$username','$email','$password','$country','$city','$region')";
+            //$sql = "INSERT INTO users(username,email,password) VALUES('$username','$email','$password')";
+            $sql = "INSERT INTO users(username,email,password,country,city,region) VALUES('$username','$email','$password','$country','$city','$region')";
             $result = mysqli_query($connection,$sql);
 
             if($result == true)
