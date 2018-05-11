@@ -11,7 +11,7 @@
     </head>
 
     <body>
-        <h1>Space Dust</h1>
+		<a href="https://spacedustrtswip.000webhostapp.com/Index.php"><h1>Space Dust</h1></a>
         <form action="Process.php" method="POST">
             <input type="text" class="form-input" name="username" placeholder="Username..." required/><br>
             <input type="password" class="form-input" name="password" placeholder="Password..." required/><br>

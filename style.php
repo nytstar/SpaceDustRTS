@@ -40,4 +40,7 @@ form
     width: 100%;
     height: 100%;
 }
-
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
