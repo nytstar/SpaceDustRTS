@@ -17,9 +17,14 @@ var keys = [];
 var socket;
 var camera;
 
+background.onload = function()
+{
+    background.src = "black.png";
+}
+
 function Awake()
 {
-    socket = io.connect("206.189.188.13:8003");
+    socket = io.connect("http://localhost:8003");
     camera = new Camera(context);
     background.src = "black.png";
     Start();
@@ -124,7 +129,9 @@ window.addEventListener("keyup",KeyReleased);
 window.addEventListener("click",MousePressed);
 window.addEventListener("mousemove",UpdateMouse);
 
+/*
 canvas.oncontextmenu = function(e)
 {
     e.preventDefault();
 }
+*/

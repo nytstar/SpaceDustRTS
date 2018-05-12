@@ -1,15 +1,16 @@
 <?php
-    /*
-    $servername = "localhost";
-    $username = "id5726088_spacedustteam";
-    $password = "Tubular@Commit";
-    $database = "id5726088_spacedust";
-    */
 
+    $servername = "sql302.ezyro.com";
+    $username = "ezyro_22070290";
+    $password = "Tubular@Commit";
+    $database = "ezyro_22070290_spacedust";
+
+    /*
     $servername = "localhost";
     $username = "root";
     $password = "";
     $database = "spacedust";
+    */
     
     if($_SERVER["REQUEST_METHOD"] == "POST")
     {
