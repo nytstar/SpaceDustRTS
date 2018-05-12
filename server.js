@@ -1,20 +1,31 @@
 var express = require("express");
 var socketio = require("socket.io");
+var https = require("https");
 var app = express();
-var port = 8003;
+var host = "206.189.188.13";
+var port = 3000;
 var players = [];
 var bases = [];
 
-var server = app.listen(port,"0.0.0.0",function()
+var server = https.createServer(app);
+
+server.listen(port,function()
 {
     console.log("Space Dust Server has been Started");
 });
+
+app.use(express.static("Public"));
 
 var IO = socketio(server);
 
 IO.sockets.on("connection",function(socket)
 {
     console.log("New Connection: " + socket.id);
+
+    socket.on("error",function(err)
+    {
+        console.log(err);
+    });
 
     for(i = 0; i < players.length; i++)
     {
@@ -37,7 +48,7 @@ IO.sockets.on("connection",function(socket)
         current_player.y = data.y;
         socket.broadcast.emit("position",data);
     });
-
+    
     socket.on("disconnect",function()
     {
         var index = players.indexOf(socket);
