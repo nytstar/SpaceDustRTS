@@ -1,12 +1,4 @@
-<?php
-    /*
-    if($_SESSION["LoggedIn"] == false)
-    {
-        header("Location: Index.php");
-    }
-    */
-?>
-
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -14,9 +6,12 @@
 <link rel="stylesheet" href="CSS/maincustom.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" media="screen" href="reset.css"/>
-<link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
-<title>SpaceDust</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="reset.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
+<title>Untitled Document</title>
+	
+	
+	
 	
 </head>
 
@@ -47,7 +42,7 @@
                     <a href="#">
                        <i class="fa fa-list fa-2x"></i>
                         <span class="nav-text">
-                            Actions
+                            
                         </span>
                     </a>
                     
@@ -56,7 +51,7 @@
                     <a href="#">
                        <i class="fa fa-folder-open fa-2x"></i>
                         <span class="nav-text">
-                            Social
+                            Pages
                         </span>
                     </a>
                    
@@ -65,7 +60,7 @@
                     <a href="#">
                         <i class="fa fa-bar-chart-o fa-2x"></i>
                         <span class="nav-text">
-                            Technology
+                            Graphs and Statistics
                         </span>
                     </a>
                 </li>
@@ -73,7 +68,7 @@
                     <a href="#">
                         <i class="fa fa-font fa-2x"></i>
                         <span class="nav-text">
-                            Military Units
+                            Typography and Icons
                         </span>
                     </a>
                 </li>
@@ -81,7 +76,7 @@
                    <a href="#">
                        <i class="fa fa-table fa-2x"></i>
                         <span class="nav-text">
-                            Bank
+                            Tables
                         </span>
                     </a>
                 </li>
@@ -89,7 +84,7 @@
                    <a href="#">
                         <i class="fa fa-map-marker fa-2x"></i>
                         <span class="nav-text">
-                            Warp
+                            Maps
                         </span>
                     </a>
                 </li>
