@@ -1,7 +1,7 @@
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
-var world_width = 100000;
-var world_height = 100000;
+var world_width = window.innerWidth;
+var world_height = window.innerHeight;
 var map_width = canvas.width = canvas.scrollWidth = world_width;
 var map_height = canvas.height = canvas.scrollHeight = world_height;
 var background = new Image();
