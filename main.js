@@ -17,11 +17,6 @@ var keys = [];
 var socket;
 var camera;
 
-background.onload = function()
-{
-    background.src = "black.png";
-}
-
 function Awake()
 {
     socket = io.connect("http://localhost:8003");
