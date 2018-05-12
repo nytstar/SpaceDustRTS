@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<meta http-equiv="refresh" content="5;https://spacedustrtswip.000webhostapp.com/Login.php" />
-        <link rel="stylesheet" type="text/css" media="screen" href="reset.php"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="reset.css"/>
         <link rel="stylesheet" type="text/css" media="screen" href="main.php"/>
         <script src="Tween.js"></script>
         <script src="TweenMax.js"></script>
