@@ -1,13 +1,13 @@
 var express = require("express");
 var socketio = require("socket.io");
-var https = require("https");
+var http = require("http");
 var app = express();
-var host = "206.189.188.13";
-var port = 3000;
+var host = "206.189.194.69";
+var port = 80;
 var players = [];
 var bases = [];
 
-var server = https.createServer(app);
+var server = http.createServer(app);
 
 server.listen(port,function()
 {
