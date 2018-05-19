@@ -2,20 +2,11 @@ var express = require("express");
 var socketio = require("socket.io");
 var http = require("http");
 var app = express();
-var host = "206.189.194.69";
-var port = 3000;
+var port = process.env.PORT || 3000;
 var players = [];
 var bases = [];
 
-var server = http.createServer(app);
-
-server.listen(port,function()
-{
-    console.log("Space Dust Server has been Started");
-});
-
-app.use(express.static("Public"));
-
+var server = http.Server(app);
 var IO = socketio(server);
 
 IO.sockets.on("connection",function(socket)
@@ -56,4 +47,9 @@ IO.sockets.on("connection",function(socket)
         socket.broadcast.emit("destroy",{id: index});
         console.log("Player Disconnected: " + socket.id);
     });
+});
+
+server.listen(port,function()
+{
+    console.log("Space Dust has been Started on Port: " + port);
 });

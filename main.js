@@ -20,7 +20,7 @@ var camera;
 
 function Awake()
 {
-    socket = io.connect("http://localhost:3000");
+    socket = io.connect("206.189.194.69:3000");
     camera = new Camera(context);
 
     background.src = "black.png";
